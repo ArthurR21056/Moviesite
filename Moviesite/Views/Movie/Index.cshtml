@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Moviesite.Models.Movie>
+
+@{
+    ViewBag.Title = "title";
+}
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+    actionbutton{
+        color: white;
+    }
+</style>
+<h1>Movies</h1>
+
+@if (!Model.Any())
+{
+    <p>The Joker has stolen all the movies :(</p>
+}
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <th>
+                @if (movie.ReleaseDate > (DateTime.Now.AddDays(-180)))
+                {
+                    <span><font color="red">New! </font></span>
+                }
+                @Html.ActionLink(movie.Name + " (" + movie.ReleaseDate.Year + ")", "Details", "Movie", new {id = movie.Id}, null)
+            </th>
+                <th>$@movie.PriceOfMovie.00</th>
+            
+            
+        </tr>
+    }
+
+</table>
+    <button class="btn btn-primary" >@Html.ActionLink("Add Movie", "New", "Movie", new { @style = "color:white;" })</button>

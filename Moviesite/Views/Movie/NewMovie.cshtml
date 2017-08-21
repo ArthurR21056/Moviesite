@@ -1,0 +1,34 @@
+﻿@model System.Collections.Generic.List<Moviesite.Models.Movie>
+    @{
+        ViewBag.Title = "NewMovie";
+    }
+
+    <h1>New Movies</h1>
+    @if (!Model.Any())
+    {
+        <p>The Joker has stolen all the movies :(</p>
+    }
+    else
+    {
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+            @foreach (var movie in Model)
+            {
+                <tr>
+                    <th>
+                        @if (movie.IsNewMovie)
+                        {
+                            <span><font color="red">New! </font></span>
+                        }
+                        @Html.ActionLink(movie.Name + " (" + movie.ReleaseDate.Year + ")", "Details", "Movie", new { id = movie.Id }, null)
+                    </th>                   
+                    <th>$@movie.PriceOfMovie.00</th>
+                </tr>
+            }
+        </table>
+
+    }
+

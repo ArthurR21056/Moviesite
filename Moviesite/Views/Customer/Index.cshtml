@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Moviesite.Models.Customer>
+
+@{
+    ViewBag.Title = "title";
+}
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 5px;
+        text-align: left;
+    }
+
+    actionbutton {
+        color: white;
+    }
+</style>
+<h1>Customers</h1>
+
+@if (!Model.Any())
+{
+    <p>The Joker has Kidnaped all customers :)</p>
+}
+else{ 
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Membership Type</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <th>@customer.Name</th>
+            <th>@customer.MembershipType</th>
+        </tr>
+    }
+
+</table>
+}
+<button class="btn btn-primary">@Html.ActionLink("Add Customer", "New", "Customer", new { @style = "color:white;" })</button>

@@ -1,0 +1,33 @@
+﻿@model Moviesite.Models.Movie
+
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Movie</h2>
+
+@using (Html.BeginForm("Create", "Movie"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        <label>Price Of Movie</label>
+        @Html.TextBoxFor(m => m.PriceOfMovie, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Quantity)
+        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Release Date</label>
+        @Html.TextBoxFor(m => m.ReleaseDate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+}

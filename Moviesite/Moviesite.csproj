@@ -189,20 +189,121 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MovieController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706182319473_InitialModel.cs" />
+    <Compile Include="Migrations\201706182319473_InitialModel.Designer.cs">
+      <DependentUpon>201706182319473_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706182335454_AddIsNewMovie.cs" />
+    <Compile Include="Migrations\201706182335454_AddIsNewMovie.Designer.cs">
+      <DependentUpon>201706182335454_AddIsNewMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706182343305_AddMovieStatus.cs" />
+    <Compile Include="Migrations\201706182343305_AddMovieStatus.Designer.cs">
+      <DependentUpon>201706182343305_AddMovieStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706182351335_AddAgeofMovie.cs" />
+    <Compile Include="Migrations\201706182351335_AddAgeofMovie.Designer.cs">
+      <DependentUpon>201706182351335_AddAgeofMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706182357203_DeleteDiscount.cs" />
+    <Compile Include="Migrations\201706182357203_DeleteDiscount.Designer.cs">
+      <DependentUpon>201706182357203_DeleteDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706182358229_PopulateMovieStaus.cs" />
+    <Compile Include="Migrations\201706182358229_PopulateMovieStaus.Designer.cs">
+      <DependentUpon>201706182358229_PopulateMovieStaus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706190010002_ApplyNameNull.cs" />
+    <Compile Include="Migrations\201706190010002_ApplyNameNull.Designer.cs">
+      <DependentUpon>201706190010002_ApplyNameNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191518552_AddNullToYear.cs" />
+    <Compile Include="Migrations\201706191518552_AddNullToYear.Designer.cs">
+      <DependentUpon>201706191518552_AddNullToYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191521299_AddDoubletoPrice.cs" />
+    <Compile Include="Migrations\201706191521299_AddDoubletoPrice.Designer.cs">
+      <DependentUpon>201706191521299_AddDoubletoPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191555138_AddPopular.cs" />
+    <Compile Include="Migrations\201706191555138_AddPopular.Designer.cs">
+      <DependentUpon>201706191555138_AddPopular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191608174_PopulatePopulartable.cs" />
+    <Compile Include="Migrations\201706191608174_PopulatePopulartable.Designer.cs">
+      <DependentUpon>201706191608174_PopulatePopulartable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706301626320_update.cs" />
+    <Compile Include="Migrations\201706301626320_update.Designer.cs">
+      <DependentUpon>201706301626320_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707020021098_addMonthToMovie.cs" />
+    <Compile Include="Migrations\201707020021098_addMonthToMovie.Designer.cs">
+      <DependentUpon>201707020021098_addMonthToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707020028552_addMonthToMovieModel.cs" />
+    <Compile Include="Migrations\201707020028552_addMonthToMovieModel.Designer.cs">
+      <DependentUpon>201707020028552_addMonthToMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707160101322_AddDateForRelease.cs" />
+    <Compile Include="Migrations\201707160101322_AddDateForRelease.Designer.cs">
+      <DependentUpon>201707160101322_AddDateForRelease.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707160148522_sorttable.cs" />
+    <Compile Include="Migrations\201707160148522_sorttable.Designer.cs">
+      <DependentUpon>201707160148522_sorttable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708210058113_AddCustomer.cs" />
+    <Compile Include="Migrations\201708210058113_AddCustomer.Designer.cs">
+      <DependentUpon>201708210058113_AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708210103439_AddDuration.cs" />
+    <Compile Include="Migrations\201708210103439_AddDuration.Designer.cs">
+      <DependentUpon>201708210103439_AddDuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708210156097_ChangeDataType.cs" />
+    <Compile Include="Migrations\201708210156097_ChangeDataType.Designer.cs">
+      <DependentUpon>201708210156097_ChangeDataType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708211433414_AddMembershiptype.cs" />
+    <Compile Include="Migrations\201708211433414_AddMembershiptype.Designer.cs">
+      <DependentUpon>201708211433414_AddMembershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708211445379_AddNametoMembershiptype.cs" />
+    <Compile Include="Migrations\201708211445379_AddNametoMembershiptype.Designer.cs">
+      <DependentUpon>201708211445379_AddNametoMembershiptype.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708211450107_PopulateDataBase.cs" />
+    <Compile Include="Migrations\201708211450107_PopulateDataBase.Designer.cs">
+      <DependentUpon>201708211450107_PopulateDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708211457547_AddStocktoMovie.cs" />
+    <Compile Include="Migrations\201708211457547_AddStocktoMovie.Designer.cs">
+      <DependentUpon>201708211457547_AddStocktoMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieStatus.cs" />
+    <Compile Include="Models\NewCustomerViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cosmo_bootstrap.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -255,6 +356,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
+    <Content Include="Views\Movie\Popular.cshtml" />
+    <Content Include="Views\Movie\New.cshtml" />
+    <Content Include="Views\Movie\NewMovie.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -273,6 +381,77 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706182319473_InitialModel.resx">
+      <DependentUpon>201706182319473_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706182335454_AddIsNewMovie.resx">
+      <DependentUpon>201706182335454_AddIsNewMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706182343305_AddMovieStatus.resx">
+      <DependentUpon>201706182343305_AddMovieStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706182351335_AddAgeofMovie.resx">
+      <DependentUpon>201706182351335_AddAgeofMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706182357203_DeleteDiscount.resx">
+      <DependentUpon>201706182357203_DeleteDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706182358229_PopulateMovieStaus.resx">
+      <DependentUpon>201706182358229_PopulateMovieStaus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706190010002_ApplyNameNull.resx">
+      <DependentUpon>201706190010002_ApplyNameNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191518552_AddNullToYear.resx">
+      <DependentUpon>201706191518552_AddNullToYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191521299_AddDoubletoPrice.resx">
+      <DependentUpon>201706191521299_AddDoubletoPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191555138_AddPopular.resx">
+      <DependentUpon>201706191555138_AddPopular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191608174_PopulatePopulartable.resx">
+      <DependentUpon>201706191608174_PopulatePopulartable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706301626320_update.resx">
+      <DependentUpon>201706301626320_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707020021098_addMonthToMovie.resx">
+      <DependentUpon>201707020021098_addMonthToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707020028552_addMonthToMovieModel.resx">
+      <DependentUpon>201707020028552_addMonthToMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707160101322_AddDateForRelease.resx">
+      <DependentUpon>201707160101322_AddDateForRelease.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707160148522_sorttable.resx">
+      <DependentUpon>201707160148522_sorttable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708210058113_AddCustomer.resx">
+      <DependentUpon>201708210058113_AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708210103439_AddDuration.resx">
+      <DependentUpon>201708210103439_AddDuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708210156097_ChangeDataType.resx">
+      <DependentUpon>201708210156097_ChangeDataType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708211433414_AddMembershiptype.resx">
+      <DependentUpon>201708211433414_AddMembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708211445379_AddNametoMembershiptype.resx">
+      <DependentUpon>201708211445379_AddNametoMembershiptype.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708211450107_PopulateDataBase.resx">
+      <DependentUpon>201708211450107_PopulateDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708211457547_AddStocktoMovie.resx">
+      <DependentUpon>201708211457547_AddStocktoMovie.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
