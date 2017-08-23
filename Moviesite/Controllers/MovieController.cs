@@ -23,16 +23,38 @@ namespace Moviesite.Controllers
             _context.Dispose();
         }
 
-        public ActionResult New()
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            return View("New", movie);
+        }
+
+            public ActionResult New()
         {
             var movie = new Movie();
             
             return View(movie);
         }
         [HttpPost]
-        public ActionResult Create(Movie movie)
+        public ActionResult Save(Movie movie)
         {
-            _context.Movies.Add(movie);
+            if (movie.Id == 0)
+                _context.Movies.Add(movie);
+
+            else
+            {
+                var movieInDb = _context.Movies.SingleOrDefault(c => c.Id == movie.Id);
+
+                movieInDb.Name = movie.Name;
+                movieInDb.Quantity = movie.Quantity;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.Description = movie.Description;
+                movieInDb.PriceOfMovie = movie.PriceOfMovie;
+            }
             _context.SaveChanges();
             return RedirectToAction("Index", "Movie");
         }

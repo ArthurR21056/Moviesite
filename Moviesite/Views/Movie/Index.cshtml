@@ -37,11 +37,9 @@
                 }
                 @Html.ActionLink(movie.Name + " (" + movie.ReleaseDate.Year + ")", "Details", "Movie", new {id = movie.Id}, null)
             </th>
-                <th>$@movie.PriceOfMovie.00</th>
-            
-            
+            <th>$@movie.PriceOfMovie.00</th>
+            <th>@Html.ActionLink("Edit", "Edit", "Movie", new { id = movie.Id }, null)</th>    
         </tr>
     }
-
 </table>
-    <button class="btn btn-primary" >@Html.ActionLink("Add Movie", "New", "Movie", new { @style = "color:white;" })</button>
+<button class="btn btn-primary" >@Html.ActionLink("Add Movie", "New", "Movie", new { @style = "color:white;" })</button>

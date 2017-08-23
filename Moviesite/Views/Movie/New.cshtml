@@ -5,9 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New Movie</h2>
-
-@using (Html.BeginForm("Create", "Movie"))
+@if (Model.Name == null)
+{
+    <h2>New Movie</h2>
+}
+else
+{
+    <h2>@Model.Name</h2>
+}
+@using (Html.BeginForm("Save", "Movie"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
@@ -23,11 +29,12 @@
     </div>
     <div class="form-group">
         <label>Release Date</label>
-        @Html.TextBoxFor(m => m.ReleaseDate, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Description)
         @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
     </div>
+    @Html.HiddenFor(m => m.Id)
     <button type="submit" class="btn btn-primary">Save</button>
 }
