@@ -23,6 +23,7 @@ namespace Moviesite.Controllers
             _context.Dispose();
         }
 
+        //Edits current movie in the database
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
@@ -32,13 +33,15 @@ namespace Moviesite.Controllers
 
             return View("New", movie);
         }
-
-            public ActionResult New()
+        //Give a empty movie object to the view to be edited
+        public ActionResult New()
         {
             var movie = new Movie();
             
             return View(movie);
         }
+        //If id exist in database overrides the data
+        //else creates new entry in database
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
@@ -93,6 +96,7 @@ namespace Moviesite.Controllers
 
             return View(sortedMovies);
         }
+        // GET: List of New movies
         public ActionResult NewMovie()
         {
             var movies = _context.Movies.ToList();

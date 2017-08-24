@@ -20,6 +20,8 @@ namespace Moviesite.Controllers
         {
             _context.Dispose();
         }
+
+        //Give a empty movie object to the view to be edited
         public ActionResult New()
         {
             var membershipType = _context.MembershipType;
@@ -37,21 +39,21 @@ namespace Moviesite.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "Customer");
         }
-        // GET: Customer
+        // GET: Customers
         public ActionResult Index()
         {
             var customers = _context.Customer.ToList();
 
             return View(customers);
         }
-
+        // GET: Customer details base on id
         public ActionResult Detail(int id)
         {
             var customer = _context.Customer.SingleOrDefault(c => c.Id == id);
             
-             if (customer == null){ return HttpNotFound(); }
+            if (customer == null){ return HttpNotFound(); }
              
-             return View(customer);
+            return View(customer);
         }
 
     }

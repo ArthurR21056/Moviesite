@@ -21,7 +21,6 @@ namespace Moviesite.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public DbSet<Movie> Movies { get; set; }
-        public DbSet<MovieStatus> MovieStatus { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<MembershipType> MembershipType { get; set; }
 
