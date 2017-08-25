@@ -45,6 +45,12 @@ namespace Moviesite.Controllers
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var invalidMovie = movie;
+           
+                return View("New", invalidMovie);
+            }
             if (movie.Id == 0)
                 _context.Movies.Add(movie);
 
