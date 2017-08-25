@@ -21,5 +21,9 @@ namespace Moviesite.Models
         public int DurationInMonths { get; set; }
 
         public int DiscountRate { get; set; }
+
+        public static readonly byte Unknown = 0;
+        public static readonly byte PayAsYouGo = 0;
+
     }
 }

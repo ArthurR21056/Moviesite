@@ -292,8 +292,21 @@
     <Compile Include="Migrations\201708231422477_deleteMovieStatusdb.Designer.cs">
       <DependentUpon>201708231422477_deleteMovieStatusdb.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708250422323_AddExpireDatetoCustomer.cs" />
+    <Compile Include="Migrations\201708250422323_AddExpireDatetoCustomer.Designer.cs">
+      <DependentUpon>201708250422323_AddExpireDatetoCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250440252_deleteExpireDate.cs" />
+    <Compile Include="Migrations\201708250440252_deleteExpireDate.Designer.cs">
+      <DependentUpon>201708250440252_deleteExpireDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708250500357_nothing.cs" />
+    <Compile Include="Migrations\201708250500357_nothing.Designer.cs">
+      <DependentUpon>201708250500357_nothing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Min18YearsIfMember.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -366,6 +379,7 @@
     <Content Include="Views\Movie\NewMovie.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\New.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -457,6 +471,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708231422477_deleteMovieStatusdb.resx">
       <DependentUpon>201708231422477_deleteMovieStatusdb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250422323_AddExpireDatetoCustomer.resx">
+      <DependentUpon>201708250422323_AddExpireDatetoCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250440252_deleteExpireDate.resx">
+      <DependentUpon>201708250440252_deleteExpireDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708250500357_nothing.resx">
+      <DependentUpon>201708250500357_nothing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
